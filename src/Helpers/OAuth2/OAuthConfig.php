@@ -8,6 +8,7 @@ use Closure;
 use Saloon\Http\Request;
 use Saloon\Traits\Makeable;
 use Saloon\Exceptions\OAuthConfigValidationException;
+use Stringable;
 
 /**
  * @method static static make()
@@ -73,7 +74,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setClientId(string $clientId): static
+    public function setClientId(string|Stringable $clientId): static
     {
         $this->clientId = $clientId;
 
@@ -93,7 +94,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setClientSecret(string $clientSecret): static
+    public function setClientSecret(string|Stringable $clientSecret): static
     {
         $this->clientSecret = $clientSecret;
 
@@ -113,7 +114,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setRedirectUri(string $redirectUri): static
+    public function setRedirectUri(string|Stringable $redirectUri): static
     {
         $this->redirectUri = $redirectUri;
 
@@ -133,7 +134,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setAuthorizeEndpoint(string $authorizeEndpoint): static
+    public function setAuthorizeEndpoint(string|Stringable $authorizeEndpoint): static
     {
         $this->authorizeEndpoint = $authorizeEndpoint;
 
@@ -153,7 +154,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setTokenEndpoint(string $tokenEndpoint): static
+    public function setTokenEndpoint(string|Stringable $tokenEndpoint): static
     {
         $this->tokenEndpoint = $tokenEndpoint;
 
@@ -173,7 +174,7 @@ class OAuthConfig
      *
      * @return $this
      */
-    public function setUserEndpoint(string $userEndpoint): static
+    public function setUserEndpoint(string|Stringable $userEndpoint): static
     {
         $this->userEndpoint = $userEndpoint;
 
